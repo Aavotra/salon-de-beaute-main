@@ -1,0 +1,41 @@
+<app-header-client></app-header-client>
+
+<!-- Services Start -->
+<div class="container-fluid services py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center mb-5" style="max-width: 800px;">
+            <p class="fs-4 text-uppercase text-center text-primary">Nos Services</p>
+            <h1 class="display-3">SALON DE BEAUTE Services</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6" *ngFor="let service of services">
+                <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <div class="services-content text-end">
+                                <h3>{{ service.nom }}</h3>
+                                <p>durée : {{ service.duree }}</p>
+                                <p>prix : {{ service.prix }}</p>
+                                <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Prendre</a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="services-img d-flex align-items-center justify-content-center rounded">
+                                <img [src]="'img/' + service.image" class="img-fluid rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <div class="services-btn text-center">
+                    <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-3 px-5">Plus de service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+<app-footer-client></app-footer-client>
